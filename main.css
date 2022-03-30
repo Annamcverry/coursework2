@@ -177,3 +177,7 @@ li {
   background: #04aa6d;
   cursor: pointer;
 }
+
+.myUnits {
+  font-style: oblique;
+}
