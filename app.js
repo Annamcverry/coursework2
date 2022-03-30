@@ -17,11 +17,23 @@ switcher.addEventListener('click', function() {
 });
 
 
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value; // Display the default slider value
+var myRange = document.querySelector("#myRange");
+      var myValue = document.querySelector("#myValue");
+      var myUnits = "myUnits";
+      var off =
+        myRange.offsetWidth / (parseInt(myRange.max) - parseInt(myRange.min));
+      var px =
+        (myRange.valueAsNumber - parseInt(myRange.min)) * off -
+        myValue.offsetParent.offsetWidth / 2;
 
-// Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
-  output.innerHTML = this.value;
-}
+      myValue.parentElement.style.left = px + "px";
+      myValue.parentElement.style.top = myRange.offsetHeight + "px";
+      myValue.innerHTML = myRange.value + " " + myUnits;
+
+      myRange.oninput = function () {
+        let px =
+          (myRange.valueAsNumber - parseInt(myRange.min)) * off -
+          myValue.offsetWidth / 2;
+        myValue.innerHTML = myRange.value + " " + myUnits;
+        myValue.parentElement.style.left = px + "px";
+      };
