@@ -11,7 +11,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Holistays</title>
-    <script src="app.js"></script>
     <link rel="stylesheet" href="main.css" />
   </head>
 
@@ -28,33 +27,18 @@
       <a href="../coursework2/MyStays.html">My Stays</a>
     </div>
 
-    <form action="form" action="/my-handling-form-page" method="post">
-      <ul>
-        <li>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="user_name" />
-        </li>
-        <li>
-          <label for="mail">E-mail:</label>
-          <input type="email" id="mail" name="user_email" />
-        </li>
-        <li>
-          <label for="msg">Message:</label>
-          <textarea id="msg" name="user_message"></textarea>
-        </li>
-      </ul>
-      <h4>
-        Check-in Date :
-        <input type="datetime-local" id="Test_DatetimeLocal" />
-      </h4>
-
-      <h4>
-        Check-out Date :
-        <input type="datetime-local" id="Test_DatetimeLocal" />
-      </h4>
-      <li class="button">
-        <button type="submit">Send your message</button>
-      </li>
+    <form>
+      <label for="checkIn"> Check-in Date :</label>
+      <input type="date" id="checkIn" />
+      <label for="checkOut">Check-out Date :</label>
+      <input type="date" id="checkOut" />
+      <label for="noOfPeople">Number of People</label>
+      <select id="noOfPeople" name="noOfPeople">
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+      <button id="formButton" type="button">Submit Your Stay</button>
     </form>
 
     <!--Dropdown1-->
@@ -100,29 +84,8 @@
       <input type="range" id="myRange" max="500" min="0" style="width: 80%" />
     </div>
 
-    <script type="text/javascript" charset="utf-8">
-      var myRange = document.querySelector("#myRange");
-      var myValue = document.querySelector("#myValue");
-      var myUnits = "Pounds";
-      var off =
-        myRange.offsetWidth / (parseInt(myRange.max) - parseInt(myRange.min));
-      var px =
-        (myRange.valueAsNumber - parseInt(myRange.min)) * off -
-        myValue.offsetParent.offsetWidth / 2;
-
-      myValue.parentElement.style.left = px + "px";
-      myValue.parentElement.style.top = myRange.offsetHeight + "px";
-      myValue.innerHTML = myRange.value + " " + myUnits;
-
-      myRange.oninput = function () {
-        let px =
-          (myRange.valueAsNumber - parseInt(myRange.min)) * off -
-          myValue.offsetWidth / 2;
-        myValue.innerHTML = myRange.value + " " + myUnits;
-        myValue.parentElement.style.left = px + "px";
-      };
-    </script>
-
     <p>Find your Stay</p>
+
+    <script src="./app.js"></script>
   </body>
 </html>
