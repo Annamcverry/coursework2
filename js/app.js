@@ -12,5 +12,5 @@ formButton.onclick = function () {
   localStorage.setItem("checkInDate", checkInDate.value);
   localStorage.setItem("checkOutDate", checkOutDate.value);
 
-  window.location.href = "./FeaturedStays.html";
+  window.location.href = "./FindYourStay.html";
 };
