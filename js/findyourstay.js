@@ -10,3 +10,4 @@ document.body.onload = function () {
     console.log(price);
     console.log(style);
   };
+  
