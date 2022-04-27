@@ -1,16 +1,13 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title>Holistays</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     
+    <title>Holistays</title>
+
     <link rel="stylesheet" href="main.css" />
   </head>
 
@@ -53,9 +50,9 @@
       </select>
       <label for="style">Stay Style</label>
       <select id="style" name="style">  
-        <option value="10">City</option>
-        <option value="20">Outdoor</option>
-        <option value="30">Both</option>
+        <option value="10">City Break</option>
+        <option value="20">Outdoor Adventure</option>
+        <option value="30">Bit of Both</option>
       </select>
       <br>
       <button id="formButton" type="button">Submit Your Stay</button>
@@ -73,19 +70,47 @@
     </div>
 
 
+      <div class="col-sm-3"></div>
       <div class="row">
         <div class="col-sm-12">
-           City Break &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           Outdoor Adventure&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           A bit of Both
+          <img
+            id="belfast"
+            src="./Images/belfast.jpg"
+            class="img-thumbnail"
+            alt="City Break"
+          />
+          <img
+            id="cliff"
+            src="./Images/cliffs.jpg"
+            class="img-thumbnail"
+            alt="Outdoor Adventure"
+            id="cliff"
+          />
+          <img
+            id="bitofboth"
+            src="./Images/bitofboth.jpg"
+            class="img-thumbnail"
+            alt="Bit of both "
+            id="bitofboth"
+          />
         </div>
-       </div>
-    
-       </div>
-</div>
-   <div class="footer">
-    <p>Contact us: 098765432 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HoliStayie@gmail.com </p>
-  </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            City Break
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Outdoor
+            Adventure&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            A bit of Both
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>
+        Contact us: 098765432 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        HoliStayie@gmail.com
+      </p>
+    </div>
     <script src="js/app.js"></script>
   </body>
 </html>
