@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>How To Dynamically Create HTML From JS</h1>
+      <p>HTML can be rendered <em>Statically</em> or <em>Dynamically</em>.</p>
+      <h2>Static</h2>
+      <p>
+        This means that no matter what happens on the page, each time the
+        browser renders this HTML page it will always display the same.
+      </p>
+
+      <h2>Dynamically</h2>
+      <p>
+        This means that what has rendered on the page might differ dependant on
+        different scenarios. IE, in your case, when a user selects a different
+        price or location.
+      </p>
+
+      <p>
+        <em
+          >See below the image which we are going to render both static and
+          dynamically.</em
+        >
+      </p>
+      <img class="mockup" src="./mockup.png" alt="pic of spain" />
+
+      <h3>Static Rendering</h3>
+      <p>
+        This below element has been created using HTML alone and if you wanted
+        to create multiple listings we would need to copy and paste the code
+        countless times and manually change all the content of each listing.
+        Another downside to this is if we wanted to add say a third item to the
+        listing EG:<em>Has Wifi: Yes/No</em>, we will now need to go into every
+        HTML item that we have and manually add it. This can be a pain if we
+        have 5+ items to add it to...
+      </p>
+      <!-- JS Reference #3: -->
+      <div class="row tile">
+        <div class="col-4 tile-img"></div>
+        <div class="col-8 tile-body">
+          <!-- JS Reference #4: -->
+          <h4>Spain</h4>
+          <h4 class="tile-price">Price: £100/day</h4>
+          <p>People: 2</p>
+          <p>House Type: Apartment</p>
+        </div>
+      </div>
+
+      <h3>Dynamic Rendering</h3>
+      <p>
+        This method utilises JavaScript such that we create the CSS for each
+        item using class names and assign them to the elements when they are
+        created in JS.
+      </p>
+      <p>
+        Look to the JS file I have supplied to follow along with how this has
+        been done, I have included comments and steps so it can be followed in
+        logical order.
+      </p>
+
+      <!-- This is the JavaScript root element that we are targeting -->
+      <div id="root-contianer"></div>
+      <p>
+        The tiles above here have been rendered using JavaScript, you can see in
+        the HTML that there is nothing here but the tiles are here.
+      </p>
+
+      <h3>Dynamic Rendering Based on Data</h3>
+
+      <button id="loader">Click me to load dynamic content.</button>
+      <div id="data-root-container"></div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+    <script src="./index2.js"></script>
+  </body>
+</html>
