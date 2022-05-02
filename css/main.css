@@ -81,7 +81,14 @@ body{
   background-color: #8FBC8F;
 }
 
-img {
+/* img {
+  width: 100px;
+  border-radius: 50px;
+  float: left;
+  margin-right: 50px;
+} */
+
+.logo {
   width: 100px;
   border-radius: 50px;
   float: left;
@@ -98,23 +105,32 @@ img {
   text-align: center;
 }
 .cliff{
-  width: 100px;
-  border-radius: 50px;
-  float: left;
+  width: 300px; 
+  height: 200px;
+  /* border-radius: 50px; */
+  float: center;
   margin-right: 50px;
 }
 .belfast{
-  width: 100px;
-  border-radius: 50px;
-  float: left;
+  width: 300px;
+  height: 200px;
+  /* border-radius: 50px; */
+  float: center;
   margin-right: 50px;
 }
 .bitofboth{
-  width: 100px;
-  border-radius: 50px;
-  float: left;
+  width: 300px;
+  height: 200px;
+  /* border-radius: 50px; */
+  float: center;
   margin-right: 50px;
 }
 form{
   padding: 50px;
+} 
+
+.col-sm-12 {
+  text-align: center; 
+  color: white;
 }
+
