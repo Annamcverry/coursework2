@@ -13,7 +13,17 @@ document.body.onload = function () {
   // Prints out from form on homepage
   const anythingContainer = document.getElementById("anything");
   const body = document.createElement("div");
+
   // body.className can assign to a css file to make everything the same
+
+  const checkInDateText = document.createElement("p");
+  checkInDateText.innerHTML = checkInDate;
+  checkInDateText.className = "checkInDateCSS";
+
+  const checkOutDateText = document.createElement("p");
+  checkOutDateText.innerHTML = checkOutDate;
+  checkOutDateText.className = "checkOutDateCSS";
+
   const noOfPeopleText = document.createElement("h4");
   noOfPeopleText.innerHTML = noOfPeople;
   noOfPeopleText.className = "example";
@@ -23,8 +33,15 @@ document.body.onload = function () {
   priceText.className = "priceCSS";
   // can move across in CSS
 
+  const styleText = document.createElement("p");
+  styleText.innerHTML = style;
+  styleText.className = "styleCSS";
+
   //Last thing you do
+  body.appendChild(checkInDateText);
+  body.appendChild(checkOutDateText);
   body.appendChild(noOfPeopleText);
   body.appendChild(priceText);
+  body.appendChild(styleText);
   anythingContainer.appendChild(body);
 };

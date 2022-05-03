@@ -1,8 +1,22 @@
 .example{
     color: pink;
-    padding: 50px;
+    padding: 30px;
 }
 .priceCSS{
     color: aqua;
-    padding: 50px;
+    padding: 30px;
+}
+.checkInDateCSS{
+    color: blue;
+    padding: 30px;
+}
+
+.checkOutDateCSS{
+    color: blue;
+    padding: 30px;
+}
+
+.styleCSS{
+    color: blue;
+    padding: 30px;
 }
