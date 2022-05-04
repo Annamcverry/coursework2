@@ -24,9 +24,9 @@ document.body.onload = function () {
   checkOutDateText.innerHTML = checkOutDate;
   checkOutDateText.className = "checkOutDateCSS";
 
-  const noOfPeopleText = document.createElement("h4");
+  const noOfPeopleText = document.createElement("p");
   noOfPeopleText.innerHTML = noOfPeople;
-  noOfPeopleText.className = "example";
+  noOfPeopleText.className = "noOfPeopleCSS";
 
   const priceText = document.createElement("p");
   priceText.innerHTML = price;
