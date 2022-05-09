@@ -27,3 +27,6 @@ h3 {
     float: center;
     /* margin-right: 50px; */
   }
+  .container mt-5 {
+    padding: 50px;
+  }

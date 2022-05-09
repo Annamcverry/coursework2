@@ -4,18 +4,35 @@ const FAKE_HOLIDAY_DATA = [
     people: "2",
     style: "Bit of Both",
     url: "./Images/galway.jpg",
+    destination: "Galway",
   },
   {
     price: "200",
     people: "1",
     style: "City Break",
     url: "./Images/belfast.jpg",
+    destination: "Belfast",
   },
   {
     price: "100",
     people: "3",
-    style: "Outdoor Adventure",
+    style: "City Break",
     url: "./Images/armagh.jpg",
+    destination: "Armagh",
+  },
+  {
+    price: "100",
+    people: "3",
+    style: "City Break",
+    url: "./Images/dublin.jpg",
+    destination: "Dublin",
+  },
+  {
+    price: "300",
+    people: "4",
+    style: "Bit of Both",
+    url: "./Images/portush.jpg",
+    destination: "Portrush",
   },
 ];
 
@@ -32,42 +49,6 @@ document.body.onload = function () {
   console.log(checkOutDate);
   console.log(price);
   console.log(style);
-
-  // Prints out from form on homepage
-  // const anythingContainer = document.getElementById("anything");
-  // const body = document.createElement("div");
-
-  // body.className can assign to a css file to make everything the same
-
-  // const checkInDateText = document.createElement("p");
-  // checkInDateText.innerHTML = checkInDate;
-  // checkInDateText.className = "checkInDateCSS";
-
-  // const checkOutDateText = document.createElement("p");
-  // checkOutDateText.innerHTML = checkOutDate;
-  // checkOutDateText.className = "checkOutDateCSS";
-
-  // const noOfPeopleText = document.createElement("p");
-  // noOfPeopleText.innerHTML = noOfPeople;
-  // noOfPeopleText.className = "noOfPeopleCSS";
-
-  // const priceText = document.createElement("p");
-  // priceText.innerHTML = price;
-  // priceText.className = "priceCSS";
-  // // can move across in CSS
-
-  //   const styleText = document.createElement("p");
-  //   styleText.innerHTML = style;
-  //   styleText.className = "styleCSS";
-
-  //   //Last thing you do
-  //   body.appendChild(checkInDateText);
-  //   body.appendChild(checkOutDateText);
-  //   body.appendChild(noOfPeopleText);
-  //   body.appendChild(priceText);
-  //   body.appendChild(styleText);
-  //   anythingContainer.appendChild(body);
-  // };
 
   const anythingContainer = document.getElementById("root-container");
   const body = document.createElement("div");
@@ -93,6 +74,9 @@ function createListing(holidayListing) {
   const image = document.createElement("img");
   image.setAttribute("src", holidayListing.url);
   image.className = "listingImage";
+  const destination = document.createElement("p");
+  destination.innerHTML = "Destination: " + holidayListing.destination;
+  destination.className = "destinationCSS";
   const style = document.createElement("p");
   style.innerHTML = "Style: " + holidayListing.style;
   const price = document.createElement("p");
@@ -103,5 +87,6 @@ function createListing(holidayListing) {
   baseListing.appendChild(style);
   baseListing.appendChild(people);
   baseListing.appendChild(price);
+  baseListing.appendChild(destination);
   return baseListing;
 }

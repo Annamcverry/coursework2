@@ -21,6 +21,8 @@
 }
 .listingImage {
     max-width: 200px;
+    padding: 10px;
+    
 }
 
 .styleCSS{
@@ -28,6 +30,12 @@
     padding: 30px;
 }
 
+
 .find-your-stay-container {
     margin: 100px 20px;
+}
+.destinationCSS{
+    color: blue;
+    align-items: right;
+    padding-left: 50px;
 }
