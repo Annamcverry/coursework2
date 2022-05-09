@@ -1,5 +1,9 @@
+.row{
+    padding: 75px;
+}
+
 .noOfPeopleCSS{
-    color: blue;
+    color: black;
     padding: 30px;
 }
 .priceCSS{
