@@ -1,3 +1,24 @@
+const HOLISTAY_DATA = [
+  {
+    price: "500",
+    people: "2",
+    style: "Bit of Both",
+  },
+  {
+    price: "200",
+    people: "1",
+    style: "City Break",
+  },
+  {
+    price: "100",
+    people: "3",
+    houseType: "Outdoor adventure",
+  },
+];
+
+
+
+
 document.body.onload = function () {
   var destination = localStorage.getItem("destination");
   var style = localStorage.getItem("stay-style");
