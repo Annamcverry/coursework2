@@ -47,3 +47,57 @@ body.appendChild(nameText);
 body.appendChild(lastnameText);
 body.appendChild(emailText);
 accountDiv.appendChild(body);
+
+//Form Validation
+function validateName(){
+  let x = document.forms["accountForm"]["firstName"].value;
+  if(x == ""){
+    alert("Name must be filled out")
+  }
+}
+
+//Tutorial new
+let id = (id) => document.getElementById(id);
+let classes = (classes) => document.getElementsByClassName(classes);
+
+//then store the classes and ids inside these vars
+
+let firstName = id("firstName"),
+  lastName = id("lastName"),
+  email = id("email"),
+  password = id("password"),
+  accountForm = id("form"),
+
+  errorMsg = classes("error"),
+  successIcon = classes("success-icon"),
+  failureIcon = classes("failure-icon");
+
+  //target form and add submit event listener
+  accountForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    engine(firstName, 0, "Name cannot be blank");
+    engine(lastName,1, "Name cannot be blank");
+    engine(email, 2, "Email cannot be blank");
+    engine(password, 3, "Password cannot be blank");
+  })
+
+  //create function to do form validation
+  //trim removes extra white space
+  let engine = (id, serial, message) => {
+    if(id.value.trim() === ""){
+      errorMsg[serial].innerHTML = message;
+      id.style.border = "2px solic red";
+      //icons
+      failureIcon[serial].style.opacity = "1";
+      successIcon[serial].style.opacity = "0";
+    }
+    else{
+      errorMsg[serial].innerHTML = "";
+      id.style.border = "2px solid green";
+      //icons
+      failureIcon[serial].style.opacity = "0";
+      successIcon[serial].style.opacity = "1";
+    }
+  }
+  window.location.href = "./Account.html";

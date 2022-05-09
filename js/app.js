@@ -1,22 +1,26 @@
-const formButton = document.getElementById("formButton");
+const formButton = document.getElementById("search-btn");
 console.log(formButton);
 formButton.onclick = function () {
   //   console.log("test");
-  const checkInDate = document.getElementById("checkIn");
-  const checkOutDate = document.getElementById("checkOut");
-  const noOfPeople = document.getElementById("noOfPeople");
+  const destination = document.getElementById("destination");
+  const stayStyle = document.getElementById("stay-style");
+  const checkInDate = document.getElementById("check-in");
+  const checkOutDate = document.getElementById("check-out");
+  const noOfPeople = document.getElementById("number-people");
   const price = document.getElementById("price");
-  const style = document.getElementById("style");
-  console.log("Check out date: " + noOfPeople.value);
+  console.log("Destination " + destination.value);
+  console.log("style: " + stayStyle.value);
   console.log("Check in date: " + checkInDate.value);
   console.log("Check out date: " + checkOutDate.value);
+  console.log("Number of people: " + noOfPeople.value);
   console.log("price: " + price.value);
-  console.log("style: " + style.value);
-  localStorage.setItem("noOfPeople", noOfPeople.value);
-  localStorage.setItem("checkInDate", checkInDate.value);
-  localStorage.setItem("checkOutDate", checkOutDate.value);
+  
+  localStorage.setItem("destination", destination.value);
+  localStorage.setItem("stay-style", stayStyle.value);
+  localStorage.setItem("check-in", checkInDate.value);
+  localStorage.setItem("check-out", checkOutDate.value);
+  localStorage.setItem("number-people", noOfPeople.value);
   localStorage.setItem("price", price.value);
-  localStorage.setItem("style", style.value);
 
   window.location.href = "./FindYourStay.html";
 };

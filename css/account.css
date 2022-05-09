@@ -1,0 +1,105 @@
+accountForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+}
+
+.title {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form div input {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #c4c4c4;
+    padding: 0 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+input:focus {
+    border: 2px solid #f2f2f2;
+}
+
+form div i {
+    position: absolute;
+    padding: 10px; 
+}
+
+.failure-icon,
+.error {
+    color: red;
+}
+
+.success-icon {
+    color: green;
+}
+
+.error {
+    font-size: 14.5px;
+    margin-top: 5px;
+}
+
+.success-icon,
+.failure-icon {
+    right: 0;
+    opacity: 0;
+}
+
+accountButton {
+    margin-top: 15px;
+    width: 100%;
+    height: 45px;
+    background-color: #f2796e;
+    border: 2px solid #f2796e;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease;
+  }
+
+accountButton:hover {
+    opacity: 0.8;
+}
+
+/* make page responsive */
+@media (max-width: 900px) {
+    .container{
+        flex-direction: column;
+    }
+
+    accountForm,
+    .content {
+        width: 100%;
+    }
+
+    .accountButton{
+        flex-direction: column;
+    } 
+}
+@media (max-width: 425px){
+    form {
+        padding: 20px;
+    }
+}
+body{
+    padding-bottom: 70px;
+}

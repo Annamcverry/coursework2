@@ -1,9 +1,11 @@
 document.body.onload = function () {
-  var noOfPeople = localStorage.getItem("noOfPeople");
-  var checkInDate = localStorage.getItem("checkInDate");
-  var checkOutDate = localStorage.getItem("checkOutDate");
+  var destination = localStorage.getItem("destination");
+  var style = localStorage.getItem("stay-style");
+  var checkInDate = localStorage.getItem("check-in");
+  var checkOutDate = localStorage.getItem("check-out");
+  var noOfPeople = localStorage.getItem("number-people");
   var price = localStorage.getItem("price");
-  var style = localStorage.getItem("style");
+  console.log(destination);
   console.log(noOfPeople);
   console.log(checkInDate);
   console.log(checkOutDate);

@@ -1,4 +1,115 @@
-﻿/* Add a black background color to the top navigation */
+﻿/*Import fonts used*/
+@import url('https://fonts.googleapis.com/css?family=Courgette|Open+Sans:400,800&display=swap');
+
+/*Basic reset*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Custom properties*/
+:root {
+  --dark-color: #2d2c2c;
+  --main-green: #8FBC8F;
+  --green-transparent: #8fbc8fb4;
+  --green-transparent-alt: rgb(181, 216, 185);
+  --white-transparent-alt: rgba(249, 252, 250, 0.5);
+  --green-light: #daf8d6;
+  --yellow-solid: #f7e285;
+  --gradient-color: linear-gradient(to right, var(--yellow-solid), var(--green-light));
+  --gradient-color-alt: linear-gradient(to right, var(--green-light), var(--yellow-solid));
+}
+
+/*Global style (global first)*/ 
+html{
+  font-size: 10px;
+}
+
+body{ 
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  color: var(--dark-color);
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+section{
+  padding: 5rem 0;
+}
+
+/*Reusable elements*/ 
+.container{
+  width: 100%;
+  max-width: 120rem;
+  padding: 0 1.5rem;
+  margin: 0 auto; 
+}
+
+.btn{
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  padding: .5rem 3.5rem;
+  border: none;
+  border-radius: 10rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.form-btn{
+  margin-top: 1.5rem;
+  /* display: inline-flex; 
+  align-items: center; */
+  /* align-items: center;
+  text-align: center;
+  position: relative; */
+  cursor: pointer;
+}
+
+.btn-gradient{
+  background-image: var(--gradient-color);
+}
+
+.btn-gradient:hover{
+  background-image: var(--gradient-color-alt);
+}
+
+.btn-green{
+  background-color: var(--main-green);
+}
+
+.btn-green:hover{
+  background-color: var(--green-light);
+}
+
+/*Header*/ 
+.header{
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--green-transparent);
+  z-index: 999;
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Add a black background color to the top navigation */
 .topnav {
   background-color: white;
   overflow: hidden;
@@ -76,11 +187,6 @@
   background-color: #3e8e41;
 }
 
-
-body{
-  background-color: #8FBC8F;
-}
-
 /* img {
   width: 100px;
   border-radius: 50px;
@@ -88,14 +194,235 @@ body{
   margin-right: 50px;
 } */
 
-.logo {
-  width: 100px;
+.logo img{
+  width: 150px;
   border-radius: 50px;
   float: left;
   margin-right: 50px;
+} 
+
+/*Banner section*/ 
+.banner{
+  width: 100%;
+  height: 100vh;
+  background: url(./);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 0; 
+} 
+
+/* .bannner img{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: -2;
 }
 
-.footer {
+.bannner-image img{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: -2;
+} */
+
+.banner::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  background-color: var(--white-transparent-alt);
+  z-index: -1;
+}
+
+.banner-text{
+  display: block;
+  font-family: 'Open Sans', sans-serif; 
+  font-size: 5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/*Booking Scetion*/ 
+.booking{
+  background-image: var(--gradient-color);
+} 
+
+.input-group{
+  margin-bottom: 1.5rem;
+  display:block;
+  /* align-items: center;
+  text-align: center;
+  position: relative; */
+  /* margin-left: 1.5rem; */
+} 
+
+.input-label{
+  display: block;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-right: 3rem;
+} 
+
+.input,
+.options{
+  /* display:table-column; */
+  outline: none;
+  border: none; 
+  width: 50%; 
+  min-height: 3rem;
+  padding: 1rem;
+  font-size: medium;
+  font-weight: bold;
+  color: #2d2c2c;
+  letter-spacing: 2px;
+  /*resize: none;*/
+}  
+
+/* .search-btn{
+  align-items: center;
+  text-align: center;
+  position: relative;
+} */
+
+::placeholder {
+  color: inherit;
+}
+
+/*Featured Stays section*/ 
+.section-head{
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.heading{
+  display: block;
+  font-size: 4rem;
+  text-transform: uppercase; 
+  letter-spacing: 3px;
+}
+
+.sub-heading{
+  font-size: 3rem;
+  font-weight: 550rem;
+} 
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 2.5rem; 
+} 
+
+.grid-item{
+  display: flex; 
+  flex-direction: column; /*defaults to row so set to coloumn*/ 
+  align-items: center;
+  justify-content: center;
+}
+
+.featured-stays{
+  height: 35rem; 
+  color: #2d2c2c;
+  padding: 1rem;
+  position: relative;  
+  /*align-items: center;*/
+  z-index: 0;
+}
+
+.stay-image{
+  width: 100%;
+  height: 100%; 
+  /* object-fit: cover; */
+  position:relative;
+  /* top: 0;
+  left: 0;  */
+  /* z-index: -2; */
+} 
+
+.stay-name{
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+} 
+
+.stay-price{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/*Reviews Section*/ 
+.reviews{
+  /*background-image: var(--green-transparent);*/
+  background-color: var(--green-transparent);
+}
+
+.review-content{ 
+  background-color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+} 
+
+.reviewer{
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.review-title{
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.review-rating{
+  margin-bottom: 1rem;
+}
+
+.review-text{
+  margin-bottom: 2rem;
+}
+
+/*Footer*/ 
+.footer{
+  /* padding: 5rem 0; */ 
+  background-color: #fff;
+}
+
+.footer-content-brand{
+  margin-bottom: 6rem;
+} 
+
+.footer-heading{
+  text-transform: uppercase; 
+  margin-bottom: 0.5rem;
+} 
+
+.socialmedia{
+  display: flex;
+} 
+
+.sm-link{
+  font-size: 3rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.paragraph-footer{
+  margin-top: 2rem;
+}
+
+/* .footer {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -103,25 +430,27 @@ body{
   background-color: white;
   color: black;
   text-align: center;
-}
-.cliff{
+} */
+
+
+/* .cliff{
   width: 300px; 
   height: 200px;
-  /* border-radius: 50px; */
+  border-radius: 50px;
   float: center;
   margin-right: 50px;
 }
 .belfast{
   width: 300px;
   height: 200px;
-  /* border-radius: 50px; */
+  border-radius: 50px;
   float: center;
   margin-right: 50px;
 }
 .bitofboth{
   width: 300px;
   height: 200px;
-  /* border-radius: 50px; */
+  border-radius: 50px;
   float: center;
   margin-right: 50px;
 }
@@ -132,5 +461,5 @@ form{
 .col-sm-12 {
   text-align: center; 
   color: white;
-}
+} */
 
