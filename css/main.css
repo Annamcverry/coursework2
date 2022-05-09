@@ -198,7 +198,9 @@ section{
   width: 150px;
   border-radius: 50px;
   float: left;
-  margin-right: 50px;
+  /* margin-right: 50px; */
+  display: flex;
+  margin-left: 0px 0px 0px ;
 } 
 
 /*Banner section*/ 

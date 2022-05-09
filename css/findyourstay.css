@@ -19,8 +19,15 @@
     color: blue;
     padding: 30px;
 }
+.listingImage {
+    max-width: 200px;
+}
 
 .styleCSS{
     color: blue;
     padding: 30px;
+}
+
+.find-your-stay-container {
+    margin: 100px 20px;
 }
