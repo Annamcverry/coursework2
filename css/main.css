@@ -402,6 +402,7 @@ section{
 .footer{
   /* padding: 5rem 0; */ 
   background-color: #fff;
+  align-items: left;
 }
 
 .footer-content-brand{
@@ -425,6 +426,8 @@ section{
 
 .paragraph-footer{
   margin-top: 2rem;
+  font-weight: normal;
+  text-align: left;
 }
 
 /* .footer {

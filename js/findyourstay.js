@@ -31,7 +31,7 @@ const FAKE_HOLIDAY_DATA = [
     price: "300",
     people: "4",
     style: "Bit of Both",
-    url: "./Images/portush.jpg",
+    url: "./Images/portrush.jpg",
     destination: "Portrush",
   },
 ];

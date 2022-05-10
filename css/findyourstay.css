@@ -76,6 +76,10 @@
     background-color:chocolate; /*this was just a test colour to see if it worked*/
 }
 
+.listingImage{
+    align-items: left;
+}
+
 .hol-btn{
     color: #fff; 
     background-image: var(--gradient-color);
