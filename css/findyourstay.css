@@ -1,3 +1,19 @@
+/*Import fonts used*/
+@import url('https://fonts.googleapis.com/css?family=Courgette|Open+Sans:400,800&display=swap');
+
+/*Custom properties*/
+:root {
+    --dark-color: #2d2c2c;
+    --main-green: #8FBC8F;
+    --green-transparent: #8fbc8fb4;
+    --green-transparent-alt: rgb(181, 216, 185);
+    --white-transparent-alt: rgba(249, 252, 250, 0.5);
+    --green-light: #daf8d6;
+    --yellow-solid: #f7e285;
+    --gradient-color: linear-gradient(to right, var(--yellow-solid), var(--green-light));
+    --gradient-color-alt: linear-gradient(to right, var(--green-light), var(--yellow-solid));
+  }
+
 .row{
     padding: 75px;
 }
@@ -38,4 +54,44 @@
     color: blue;
     align-items: right;
     padding-left: 50px;
+}
+
+/* .data-container{
+    width: 100%;
+  max-width: 120rem;
+  padding: 0 1.5rem;
+  margin: 0 auto; 
+  align-items: center;
+  text-align: center;
+} */
+
+/* I added a class name to the created listing that shows on the screen in the JS called "hol-listing" - this is how we can style the listings as they appear on the screen */
+.hol-listing{
+    width: 100%;
+    max-width: 120rem;
+    padding: 0 1.5rem;
+    margin: 0 auto; 
+    align-items: center;
+    text-align: center;
+    background-color:chocolate; /*this was just a test colour to see if it worked*/
+}
+
+.hol-btn{
+    color: #fff; 
+    background-image: var(--gradient-color);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    padding: .5rem 3.5rem;
+    border: none;
+    border-radius: 10rem;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 2rem;
+} 
+
+.hol-btn:hover{
+    background-image: var(--gradient-color-alt);
 }

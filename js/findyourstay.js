@@ -70,7 +70,8 @@ function showListing() {
 }
 
 function createListing(holidayListing) {
-  const baseListing = document.createElement("div");
+  const baseListing = document.createElement("div"); 
+  baseListing.className = "hol-listing"; /*added to see if we can call the listing as a whole in the css*/
   const image = document.createElement("img");
   image.setAttribute("src", holidayListing.url);
   image.className = "listingImage";
@@ -83,10 +84,14 @@ function createListing(holidayListing) {
   price.innerHTML = "Price: " + holidayListing.price;
   const people = document.createElement("p");
   people.innerHTML = "People: " + holidayListing.people;
+  const button = document.createElement("button"); 
+  button.className = "hol-btn"; 
+  button.innerHTML = "Book Now"; 
   baseListing.appendChild(image);
   baseListing.appendChild(style);
   baseListing.appendChild(people);
   baseListing.appendChild(price);
   baseListing.appendChild(destination);
+  baseListing.appendChild(button); 
   return baseListing;
 }
