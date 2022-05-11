@@ -69,6 +69,34 @@ const FAKE_HOLIDAY_DATA = [
     url: "./Images/portrush.jpg",
     destination: "Portrush",
   },
+  {
+    price: "300",
+    people: "2",
+    style: "City Break",
+    url: "./Images/Cork.jpg",
+    destination: "Cork",
+  },
+  {
+    price: "500",
+    people: "5",
+    style: "Bit of Both",
+    url: "./Images/Kerry.jpg",
+    destination: "Kerry",
+  },
+  {
+    price: "400",
+    people: "4",
+    style: "City Break",
+    url: "./Images/Limerick.jpg",
+    destination: "Limerick",
+  },
+  {
+    price: "200",
+    people: "2",
+    style: "Bit of Both",
+    url: "./Images/Donegal.jpeg",
+    destination: "Donegal",
+  },
 ];
 
 document.body.onload = function () {
