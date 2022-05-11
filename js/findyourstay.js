@@ -34,6 +34,41 @@ const FAKE_HOLIDAY_DATA = [
     url: "./Images/portrush.jpg",
     destination: "Portrush",
   },
+  {
+    price: "400",
+    people: "5",
+    style: "Outdoor Adventure",
+    url: "./Images/Donegal.jpeg",
+    destination: "Donegal",
+  },
+  {
+    price: "500",
+    people: "5",
+    style: "Outdoor Adventure",
+    url: "./Images/Centre-Parcs1.jpg",
+    destination: "Centre Parcs",
+  },
+  {
+    price: "200",
+    people: "1",
+    style: "City Break",
+    url: "./Images/Derry.jpg",
+    destination: "Derry/Londonderry",
+  },
+  {
+    price: "300",
+    people: "4",
+    style: "Outdoor Adventure",
+    url: "./Images/galway.jpg",
+    destination: "Galway",
+  },
+  {
+    price: "100",
+    people: "2",
+    style: "Outdoor Adventure",
+    url: "./Images/portrush.jpg",
+    destination: "Portrush",
+  },
 ];
 
 document.body.onload = function () {
@@ -70,8 +105,9 @@ function showListing() {
 }
 
 function createListing(holidayListing) {
-  const baseListing = document.createElement("div"); 
-  baseListing.className = "hol-listing"; /*added to see if we can call the listing as a whole in the css*/
+  const baseListing = document.createElement("div");
+  baseListing.className =
+    "hol-listing"; /*added to see if we can call the listing as a whole in the css*/
   const image = document.createElement("img");
   image.setAttribute("src", holidayListing.url);
   image.className = "listingImage";
@@ -84,14 +120,14 @@ function createListing(holidayListing) {
   price.innerHTML = "Price: " + holidayListing.price;
   const people = document.createElement("p");
   people.innerHTML = "People: " + holidayListing.people;
-  const button = document.createElement("button"); 
-  button.className = "hol-btn"; 
-  button.innerHTML = "Book Now"; 
+  const button = document.createElement("button");
+  button.className = "hol-btn";
+  button.innerHTML = "Book Now";
   baseListing.appendChild(image);
   baseListing.appendChild(style);
   baseListing.appendChild(people);
   baseListing.appendChild(price);
   baseListing.appendChild(destination);
-  baseListing.appendChild(button); 
+  baseListing.appendChild(button);
   return baseListing;
 }
