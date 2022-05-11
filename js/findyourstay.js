@@ -188,6 +188,13 @@ const FAKE_HOLIDAY_DATA = [
     url: "./Images/belfast.jpg",
     destination: "Belfast",
   },
+  {
+    price: "100",
+    people: "1",
+    style: "Outdoor Adventure",
+    url: "./Images/Cavan.jpg",
+    destination: "Cavan",
+  },
 ];
 
 document.body.onload = function () {
