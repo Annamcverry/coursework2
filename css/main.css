@@ -107,9 +107,9 @@ section{
 }
 
 .nav{
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: stretch;
 }
 
 /* Add a black background color to the top navigation */
@@ -123,7 +123,7 @@ section{
 .topnav a {
   float: left;
   color: black;
-  text-align: center;
+  text-align: left;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
@@ -153,8 +153,8 @@ section{
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
-  display: inline-block;
-  float: right;
+  /* display: inline-block; */
+  float: left;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -198,12 +198,12 @@ section{
 } */
 
 .logo img{
-  width: 150px;
+  width: 100px;
   border-radius: 50px;
   float: left;
   /* margin-right: 50px; */
   display: flex;
-  margin-left: 0px 0px 0px ;
+  margin: auto;
 } 
 
 /*Banner section*/ 
@@ -482,3 +482,7 @@ form{
   color: white;
 } */
 
+.logo{
+  margin: auto 5px;
+        float: left;
+}
