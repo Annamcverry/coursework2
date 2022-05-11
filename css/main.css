@@ -403,6 +403,7 @@ section{
   /* padding: 5rem 0; */ 
   background-color: #fff;
   align-items: left;
+  clear: both;
 }
 
 .footer-content-brand{
@@ -416,12 +417,22 @@ section{
 
 .socialmedia{
   display: flex;
+  font: bold;
+  color: black;
 } 
+.socialmedia-wrap{
+  display: flex;
+}
 
 .sm-link{
   font-size: 3rem;
   width: 4rem;
   height: 4rem;
+  display: flex;
+  color: #2d2c2c;
+}
+.fab fa-facebook-square{
+  color: black;
 }
 
 .paragraph-footer{

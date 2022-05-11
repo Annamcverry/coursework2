@@ -27,7 +27,15 @@ document.body.onload = function () {
   console.log(lastName);
   console.log(email);
   console.log(password);
-};
+
+
+const accountDiv = document.getElementById("userAccount");
+const body = document.createElement("div");
+createAccount();
+
+
+
+function createAccount(accountListing){
 
 const accountDiv = document.getElementById("userAccount");
 const body = document.createElement("div");
@@ -43,10 +51,17 @@ const emailText = document.createElement("p");
 emailText.innerHTML = email;
 emailText.className = "emailCSS";
 
+const passwordText = document.createElement("p");
+passwordText.innerHTML = password;
+passwordText.className = "passwordCSS";
+
 body.appendChild(nameText);
 body.appendChild(lastnameText);
 body.appendChild(emailText);
+body.appendChild(passwordText);
 accountDiv.appendChild(body);
+return body;
+}
 
 //Form Validation
 function validateName(){
@@ -56,7 +71,7 @@ function validateName(){
   }
 }
 
-//Tutorial new
+// //Tutorial new
 let id = (id) => document.getElementById(id);
 let classes = (classes) => document.getElementsByClassName(classes);
 
@@ -73,13 +88,14 @@ let firstName = id("firstName"),
   failureIcon = classes("failure-icon");
 
   //target form and add submit event listener
-  accountForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+    accountForm.addEventListener("submit", (e) => {
+      e.preventDefault();
 
     engine(firstName, 0, "Name cannot be blank");
     engine(lastName,1, "Name cannot be blank");
     engine(email, 2, "Email cannot be blank");
     engine(password, 3, "Password cannot be blank");
+
   })
 
   //create function to do form validation
@@ -100,4 +116,4 @@ let firstName = id("firstName"),
       successIcon[serial].style.opacity = "1";
     }
   }
-  window.location.href = "./Account.html";
+  };
