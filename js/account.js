@@ -2,32 +2,43 @@ var modal = document.getElementById("myModal");
 var span = document.getElementsByClassName("close")[0];
 
 const accountButton = document.getElementById("accountButton");
-console.log(accountButton);
-accountButton.onclick = function () {
-  modal.style.display = "block";
+// console.log(accountButton); {}
+// accountButton.onclick = function () 
+accountButton.onclick = function(){ 
+  modal.style.display = 'block';
 }
-  span.onclick = function() {
-  modal.style.display = "none";
-}
-  window.onclick = function(event) {
-  if (event.target == modal) {
+span.onclick = function() {
     modal.style.display = "none";
-  }//   console.log("test");
-  // const firstName = document.getElementById("firstName");
-  // const lastName = document.getElementById("lastName");
-  // const email = document.getElementById("email");
-  // const password = document.getElementById("password");
-  // console.log("First Name: " + firstName.value);
-  // console.log("Last Name: " + lastName.value);
-  // console.log("Email: " + email.value);
-  // console.log("Password: " + password.value);
-  // localStorage.setItem("firstName", firstName.value);
-  // localStorage.setItem("lastName", lastName.value);
-  // localStorage.setItem("email", email.value);
-  // localStorage.setItem("password", password.value);
-
-  // window.location.href = "./Account.html";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
 };
+
+//   modal.style.display = "block";
+// }
+//   span.onclick = function() {
+//   modal.style.display = "none";
+// }
+//   window.onclick = function(event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+  //   console.log("test");
+  const firstName = document.getElementById("firstName");
+  const lastName = document.getElementById("lastName");
+  const email = document.getElementById("email");
+  const password = document.getElementById("password");
+  console.log("First Name: " + firstName.value);
+  console.log("Last Name: " + lastName.value);
+  console.log("Email: " + email.value);
+  console.log("Password: " + password.value);
+  localStorage.setItem("firstName", firstName.value);
+  localStorage.setItem("lastName", lastName.value);
+  localStorage.setItem("email", email.value);
+  localStorage.setItem("password", password.value);
+
+  window.location.href = "./Account.html";
 
 document.body.onload = function () {
   var firstName = localStorage.getItem("firstName");
@@ -38,7 +49,7 @@ document.body.onload = function () {
   console.log(lastName);
   console.log(email);
   console.log(password);
-
+}
 
 const accountDiv = document.getElementById("userAccount");
 const body = document.createElement("div");
@@ -88,7 +99,7 @@ let classes = (classes) => document.getElementsByClassName(classes);
 
 //then store the classes and ids inside these vars
 
-let firstName = id("firstName"),
+  firstName = id("firstName"),
   lastName = id("lastName"),
   email = id("email"),
   password = id("password"),
@@ -127,4 +138,4 @@ let firstName = id("firstName"),
       successIcon[serial].style.opacity = "1";
     }
   }
-  };
+
