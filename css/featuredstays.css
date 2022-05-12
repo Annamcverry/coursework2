@@ -9,14 +9,19 @@
     max-width: 120rem;
     padding: 0 1.5rem;
     margin: 0 auto;
+    padding-bottom: 20px;
 }
 
 .tile-body {
     text-align: right; 
-    margin-top: -50px;
+    margin-top: -175px;
 }
 
 .tile-img{
     padding: 10px;
     margin-left: 20px;
+    margin-top: 10px;
+}
+footer{
+    padding: 10px;
 }

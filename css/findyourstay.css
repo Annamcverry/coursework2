@@ -78,13 +78,15 @@
 /* I added a class name to the created listing that shows on the screen in the JS called "hol-listing" - this is how we can style the listings as they appear on the screen */
 .hol-listing{
     width: 100%;
-    max-width: 120rem;
+    max-width: 145rem;
     /* padding: 0 1.5rem; */
     /* margin: 0 auto;  */
     margin: 100px 20px;
     align-items: center;
     text-align: center;
-    background-color:var(--green-transparent); /*this was just a test colour to see if it worked*/
+    background-color:var(--green-transparent);
+    
+ /*this was just a test colour to see if it worked*/
 }
 
 .listingImage{
