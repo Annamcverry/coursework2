@@ -230,6 +230,9 @@ function showListing() {
   });
 }
 
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+
 function createListing(holidayListing) {
   const baseListing = document.createElement("div");
   baseListing.className =
@@ -249,6 +252,17 @@ function createListing(holidayListing) {
   const button = document.createElement("button");
   button.className = "hol-btn";
   button.innerHTML = "Book Now";
+  button.onclick = function() {
+    modal.style.display = "block";
+  }
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
   baseListing.appendChild(image);
   baseListing.appendChild(style);
   baseListing.appendChild(people);

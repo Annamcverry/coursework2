@@ -78,7 +78,32 @@ accountButton {
 
 accountButton:hover {
     opacity: 0.8;
-}
+} 
+
+ /* Modal Content*/
+ .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+  }
+  
+  /*Close Button*/
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 /* make page responsive */
 @media (max-width: 900px) {
