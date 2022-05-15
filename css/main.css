@@ -417,23 +417,24 @@ section{
 
 .socialmedia{
   display: flex;
-  font: bold;
-  color: black;
+  /* font: bold;
+  color: black; */
 } 
 .socialmedia-wrap{
   display: flex;
 }
+
 
 .sm-link{
   font-size: 3rem; 
   width: 4rem;
   height: 4rem;
   display: flex;
-  color: #2d2c2c;
+  /* color: #2d2c2c; */
 }
-.fab fa-facebook-square{
+/* .fab fa-facebook-square{
   color: black;
-}
+} */
 
 .paragraph-footer{
   margin-top: 2rem;
