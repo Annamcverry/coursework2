@@ -45,14 +45,19 @@
     padding: 30px;
 }
 .listingImage {
-    max-width: 200px;
+    /* max-width: 200px; */
+    position: relative;
+    width: 60%;
+    height: 60%;
     padding: 10px;
     
 }
 
 .styleCSS{
-    color: blue;
-    padding: 30px;
+    color: black;
+    font-weight: bold; 
+    letter-spacing: 3px;
+    /* padding: 30px; */
 }
 
 
@@ -60,9 +65,10 @@
     margin: 100px 20px;
     /* align-items: center; */
 }
+
 .destinationCSS{
-    color: blue;
-    align-items: right;
+    color: black;
+    /* align-items: right; */
     padding-left: 50px;
 }
 

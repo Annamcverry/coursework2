@@ -240,14 +240,15 @@ function createListing(holidayListing) {
   const image = document.createElement("img");
   image.setAttribute("src", holidayListing.url);
   image.className = "listingImage";
-  const destination = document.createElement("p");
+  const destination = document.createElement("h1");
   destination.innerHTML = "Destination: " + holidayListing.destination;
   destination.className = "destinationCSS";
-  const style = document.createElement("p");
+  const style = document.createElement("h1");
   style.innerHTML = "Style: " + holidayListing.style;
-  const price = document.createElement("p");
+  style.className = "styleCSS"
+  const price = document.createElement("h1");
   price.innerHTML = "Price: " + holidayListing.price;
-  const people = document.createElement("p");
+  const people = document.createElement("h1");
   people.innerHTML = "People: " + holidayListing.people;
   const button = document.createElement("button");
   button.className = "hol-btn";
