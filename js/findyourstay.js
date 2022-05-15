@@ -211,13 +211,18 @@ document.body.onload = function () {
   console.log(price);
   console.log(style);
 
-  const anythingContainer = document.getElementById("root-container");
-  const body = document.createElement("div");
-
   showListing(); //print everything that is inside list
 };
 function showListing() {
-  const rootContianer = document.getElementById("data-container");
+  const rootContainer = document.getElementById("data-container");
+
+  const datesText = document.createElement("p");
+  datesText.className = "datesTextStyle";
+  var checkInDate = localStorage.getItem("check-in");
+  var checkOutDate = localStorage.getItem("check-out");
+  datesText.innerHTML =
+    "Check-in Date: " + checkInDate + ", Check-out Date: " + checkOutDate;
+  rootContainer.appendChild(datesText);
   const filteredList = FAKE_HOLIDAY_DATA.filter(
     (listing) =>
       listing.price == localStorage.getItem("price") &&
@@ -226,7 +231,7 @@ function showListing() {
   filteredList.forEach((listing) => {
     //console.log(listing)
     const createdListing = createListing(listing);
-    rootContianer.appendChild(createdListing);
+    rootContainer.appendChild(createdListing);
   });
 }
 
@@ -245,7 +250,7 @@ function createListing(holidayListing) {
   destination.className = "destinationCSS";
   const style = document.createElement("h1");
   style.innerHTML = "Style: " + holidayListing.style;
-  style.className = "styleCSS"
+  style.className = "styleCSS";
   const price = document.createElement("h1");
   price.innerHTML = "Price: " + holidayListing.price;
   const people = document.createElement("h1");
@@ -253,17 +258,17 @@ function createListing(holidayListing) {
   const button = document.createElement("button");
   button.className = "hol-btn";
   button.innerHTML = "Book Now";
-  button.onclick = function() {
+  button.onclick = function () {
     modal.style.display = "block";
-  }
-  span.onclick = function() {
+  };
+  span.onclick = function () {
     modal.style.display = "none";
-  }
-  window.onclick = function(event) {
+  };
+  window.onclick = function (event) {
     if (event.target == modal) {
       modal.style.display = "none";
     }
-  }
+  };
   baseListing.appendChild(image);
   baseListing.appendChild(style);
   baseListing.appendChild(people);

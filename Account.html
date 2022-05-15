@@ -43,7 +43,7 @@
     <br>
     <br>
     <form id="accountForm" action="" onsubmit="validateName()">
-      <div class="title"My Account</div>
+      <div class="title">My Account</div>
          
         <div>
           <label for="firstName">First Name: </label>
@@ -98,10 +98,10 @@
         </div>
 
         <div>  
-          <label for="password">Confirm Password: </label>
+          <label for="confirmPassword">Confirm Password: </label>
           <i class="fas fa-lock"></i>
-          <input id="password"
-           name="password" 
+          <input id="confirmPassword"
+           name="confirmPassword" 
            placeholder="Password"
            required="true" />
 
@@ -111,31 +111,18 @@
           
         </div> 
       
-        <button class="accountButton btn btn-green" >Submit</button>
+        <button class="accountButton btn btn-green">Submit</button>
 
-        <!-- The Modal -->
-        <div class="modal" id="myModal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-  
-        <!-- Modal Header -->
-            <div class="modal-header">
-              <h4 class="modal-title">Modal Heading</h4>
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-  
-        <!-- Modal body -->
-            <div class="modal-body">
-              Modal body..
-            </div>
-  
-        <!-- Modal footer -->
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-            </div>
-
-          <!-- <button type="button" id="accountButton" data-toggle="modal" data-target="#myModal">Submit</button> -->
-        </form>
+        
+      </form>
+      <!-- The Modal -->
+      <div id="accountSuccessModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Your account has been created!</p>
+        </div>
+      </div>
       </div>
       <!-- <div class="col-sm-3"></div> -->
     </div>
@@ -145,30 +132,6 @@
     Open modal
   </button> -->
   
-  <!-- The Modal -->
-  <div class="modal" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-  
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-  
-        <!-- Modal body -->
-        <div class="modal-body">
-          Modal body..
-        </div>
-  
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        </div>
-  
-      </div>
-    </div>
-  </div>
 
     <!-- <div class="userAccount">User info</div> -->
     <footer class="footer">
