@@ -221,7 +221,7 @@ function showListing() {
   var checkInDate = localStorage.getItem("check-in");
   var checkOutDate = localStorage.getItem("check-out");
   datesText.innerHTML =
-    "Check-in Date: " + checkInDate + ", Check-out Date: " + checkOutDate;
+    "Check-in Date: " + checkInDate + " - Check-out Date: " + checkOutDate;
   rootContainer.appendChild(datesText);
   const filteredList = FAKE_HOLIDAY_DATA.filter(
     (listing) =>
