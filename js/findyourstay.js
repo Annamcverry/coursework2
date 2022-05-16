@@ -164,7 +164,7 @@ const FAKE_HOLIDAY_DATA = [
     price: "500",
     people: "5",
     style: "Bit of Both",
-    url: "./Images/Donegal.jpg",
+    url: "./Images/Donegal.jpeg",
     destination: "Donegal",
   },
   {
